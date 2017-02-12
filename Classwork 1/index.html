@@ -1,0 +1,163 @@
+<!-- https://neoschat.slack.com/messages/general/ -->
+<!doctype html>
+<html>
+	<head>
+		<!-- LOL top level html tags, yo -->
+		<title>Hate The Dot</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body id="mytheme">
+		<div class="ui top fixed menu">
+		  <div class="item">
+		    <img src="images/HATE_DOT_FINAL2.png">
+		    &nbsp;&nbsp; Hate The Dot!
+		  </div>
+		  <a class="item">About Us</a>
+		  <a class="item">Packages</a>
+		  <a class="item">HTD & The Homeless</a>
+		</div> <!-- ui top fixed menu -->
+		<p></p>
+		<p></p>
+		<div class="sidenav">
+			
+			<a href="#img1" class="circular ui icon pink button inverted sidenav-link"></a>
+			<a href="#img2" class="circular ui icon pink button inverted sidenav-link"></a>
+			<a href="#img3" class="circular ui icon pink button inverted sidenav-link"></a>
+
+		</div>
+		<div id="img1" class="fullpage image/ba5f8aaa6a8fef58e140c453295548bc.jpg fullpage-img theme-img1">
+			<div class="fullpage-content">
+				<h2>Some spiders change colors to blend into their environment. It's a defense mechanism.</h2>
+				<h3>LOL I'm a person tho</h3>
+			</div>
+		</div>
+		<div id="img2" class="fullpage fullpage-img theme-img2">
+			<div class="fullpage-content">
+
+			</div>
+		</div>
+		<div id="img3" class="fullpage fullpage-img theme-img1">
+			<div class="fullpage-content js-slideshow">
+			  <div>
+			  	<h2>Some spiders change colors to blend into their environment. It's a defense mechanism.</h2>
+			  </div>
+			  <div>
+			  	<h2>111111Some spiders change colors to blend into their environment. It's a defense mechanism.</h2>
+			  </div>
+			  <div>
+			  	<h2>222222Some spiders change colors to blend into their environment. It's a defense mechanism.</h2>
+			  </div>
+			</div>
+		</div>
+
+		<!-- column content -->
+		<div class="ui two column grid centered mytheme-row-gray">
+			<div class="four column centered row">
+				<div class="column">
+					<div class="ui segment grey inverted">
+					  <h2>Hello, Wrold!</h2>
+					  <p>THis is a paragraph LOL</p>
+					  <button class="fluid ui button">Follow</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="ui segment grey inverted">
+					  <h2>Hello, Wrold!</h2>
+					  <p>THis is a paragraph LOL</p>
+					  <button class="fluid ui blue button">Follow</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="ui segment grey inverted">
+					  <h2>Hello, Wrold!</h2>
+					  <p>THis is a paragraph LOL</p>
+					  <button class="fluid ui button">Follow</button>
+					</div>
+				</div>
+			</div><!-- four column centered row -->
+		</div><!-- three column grid -->
+		<!-- end column content -->
+
+		<!-- FOOTER -->
+
+		<div class="ui inverted vertical footer segment">
+			<img src="http://i.annihil.us/u/prod/marvel/i/mg/2/00/53710b14a320b.png" class="ui centered mini image">
+			<div class="ui inverted section divider"></div>
+			<div class="ui center aligned container">
+				<div class="ui stackable inverted divided grid">
+					<div class="three wide column">
+						<h4 class="ui inverted header">Group 1</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">Link One</a>
+							<a href="#" class="item">Link Two</a>
+							<a href="#" class="item">Link Three</a>
+							<a href="#" class="item">Link Four</a>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header">Group 1</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">Link One</a>
+							<a href="#" class="item">Link Two</a>
+							<a href="#" class="item">Link Three</a>
+							<a href="#" class="item">Link Four</a>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header">Group 1</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">Link One</a>
+							<a href="#" class="item">Link Two</a>
+							<a href="#" class="item">Link Three</a>
+							<a href="#" class="item">Link Four</a>
+						</div>
+					</div>
+					<div class="seven wide column">
+						<h4 class="ui inverted header">MORE STUFF HERE</h4>
+					</div>
+				</div>
+			</div><!-- ui center aligned container -->
+		</div>
+		<!-- END FOOTER -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+				
+		<script>
+			const sideNav = $('.sidenav');
+			console.log(sideNav)
+			sideNav.animate({
+				opacity: '1.0'
+			}, 1000);
+
+			// 
+
+			$('.sidenav-link').on('click', function(e) {
+				// this will run ONLY when the user registers a click
+				// on .sidenav-link
+
+				e.preventDefault();
+
+				// first get the CURRENT link you clicked on
+				const currentLinkClicked = $(e.target);
+
+				// then, get the #[img]Name
+				const pageToGoTo = currentLinkClicked.attr('href');
+
+				// scroll to it
+				$('html, body').animate({scrollTop: $( pageToGoTo ).offset().top}, 300);
+			});
+
+			$('.js-slideshow').slick({
+				autoplay: true,
+  				autoplaySpeed: 2000,
+  				arrows: false,
+			  });
+		</script>
+	</body>
+</html>
+
+
+
